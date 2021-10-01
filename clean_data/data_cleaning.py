@@ -31,6 +31,8 @@ class DataCleaning:
             if all_values_per_date.eq(all_values_per_date.iloc[0]).all():
                 [idx.append(i) for i in list(all_values_per_date.index)]
 
+        self.data = data.drop(idx)
+
         return self.data
 
     def run(self):
